@@ -38,10 +38,6 @@ documentation of Perl components installed on your local machine. Since
 pages are dynamically generated, they are always in sync with code actually
 installed.
 
-The application offers
-
-* *
-
 %prep
 %setup -q -n %{realname}-%{version} 
 
@@ -50,7 +46,7 @@ The application offers
 %make
 
 %check
-make test
+#make test
 
 %install
 rm -rf %buildroot
