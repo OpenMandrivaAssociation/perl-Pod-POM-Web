@@ -1,18 +1,16 @@
+%define upstream_name    Pod-POM-Web
+%define upstream_version 1.11
 
-%define realname   Pod-POM-Web
-%define version    1.11
-%define release    %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Fulltext search for Pod::POM::Web
-Source:     http://www.cpan.org/modules/by-module/Pod/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Alien::GvaScript)
 BuildRequires: perl(Config)
 BuildRequires: perl(Encode::Guess)
@@ -29,8 +27,8 @@ BuildRequires: perl(Time::HiRes)
 BuildRequires: perl(URI)
 BuildRequires: perl(URI::QueryParam)
 BuildRequires: perl(Module::Build::Compat)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 the Pod::POM::Web manpage is a Web application for browsing the
@@ -39,7 +37,7 @@ pages are dynamically generated, they are always in sync with code actually
 installed.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -60,5 +58,4 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
