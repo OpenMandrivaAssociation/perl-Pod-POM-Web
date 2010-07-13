@@ -1,5 +1,5 @@
 %define upstream_name    Pod-POM-Web
-%define upstream_version 1.13
+%define upstream_version 1.14
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
