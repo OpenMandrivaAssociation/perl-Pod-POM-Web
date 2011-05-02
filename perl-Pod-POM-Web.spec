@@ -1,9 +1,9 @@
 %define upstream_name    Pod-POM-Web
-%define upstream_version 1.15
+%define upstream_version 1.17
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Fulltext search for Pod::POM::Web
 License:    GPL+ or Artistic
