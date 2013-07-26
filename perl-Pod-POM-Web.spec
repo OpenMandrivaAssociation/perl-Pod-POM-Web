@@ -1,15 +1,15 @@
 %define upstream_name    Pod-POM-Web
-%define upstream_version 1.17
+%define upstream_version 1.19
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.19
+Release:	1
 
 Summary:	Fulltext search for Pod::POM::Web
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-POM-Web-1.19.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Alien::GvaScript)
@@ -92,4 +92,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Mar 31 2009 cpan2dist 1.11-1mdv
 - initial mdv release, generated with cpan2dist
+
 

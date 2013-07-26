@@ -1,2 +1,4 @@
+removed_sources:
+  Pod-POM-Web-1.17.tar.gz: bdff8d0eed455e273df546f15ab44c6372a9b5e0
 sources:
-  "Pod-POM-Web-1.17.tar.gz": bdff8d0eed455e273df546f15ab44c6372a9b5e0
+  Pod-POM-Web-1.19.tar.gz: b6872170eee6490c17cc26b3d93af56b173f5d12
